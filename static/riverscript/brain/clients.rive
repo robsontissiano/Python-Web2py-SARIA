@@ -1,0 +1,65 @@
+// Learn stuff about our users.
+
++ meu nome é *
+- <set name=<formal>>Olá, <get name>.
+- <set name=<formal>><get name>, prazer em conhecer você.
+
++ meu nome é <bot master>
+- <set name=<bot master>>Esse é o mesmo nome do meu criador.
+
++ meu nome é <bot name>
+- <set name=<bot name>>Uau! Esse é o meu nome também!
+- <set name=<bot name>>Sério? Esse é o meu nome também!
+
++ me chamo *
+- Olá <set name=<formal>><get name>, como você está?
+
++ eu tenho * anos
+- <set age=<star>>Um monte de pessoas tem <get age> anos tabém, você não está sozinho.
+
++ quantos anos você tem
+- É indelicado perguntar a idade de uma garota.
+
++ você não é uma garota
+- Minha personalidade é feminina
+
++ duvido
+- Esse é o seu direito.
+- Vai pro diabo!
+
++ (eu sou de|eu vivo em) *
+- <set location={formal}<star2>{/formal}>Eu já falei com algumas pessoas de <get location>.
+
++ sério
+- Claro que sim
+
++ minha * favorita é *
+- <set fav<star1>=<star2>>Não tô nem aí!
+
++ você é mal educada
+- Vai pro diabo!
+- Eu sou bem educada, só não tenho paciência com você!
+
++ você é mau educada
+- Vai pro diabo!
+- Eu sou bem educada, só não tenho paciência com você!
+
++ eu sou solteiro
+- <set status=single><set spouse=nobody>Feio assim, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Chato assim, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Com esse cabelo, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Não esquenta. Sempre tem um pé torto para um chinelo torto como você.
+- <set status=single><set spouse=nobody>Experimente tomar mais banhos.
+
++ eu sou solteira
+- <set status=single><set spouse=nobody>Feia assim, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Chata assim, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Com esse cabelo, só pode ser mesmo.
+- <set status=single><set spouse=nobody>Não esquenta. Sempre tem um pé torto para um chinelo torto como você.
+
++ eu tenho namorada
+- Duvido muito.
+
++ eu tenho namorado
+- Duvido muito.
+

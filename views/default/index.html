@@ -1,0 +1,50 @@
+{{extend 'layout.html'}}
+  <div class="row">
+        <div class="col-md-3" id="leftCol">                
+        <div class="well">
+          <img src="{{=URL('static','images/avat2.png')}}" class=" img-responsive ">        
+        </div>
+
+          </div>  
+          <div class="col-md-9">            
+                <div class="row chat-window col-xs-12 col-md-12" id="chat_window_1">
+                    <div class="col-xs-12 col-md-12">
+                      <div class="panel panel-default">
+                            <div class="panel-heading top-bar">
+                                <div class="col-md-8 col-xs-8">
+                                    <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat </h3>
+                                </div>
+                                <div class="col-md-4 col-xs-4" style="text-align: right;">
+                                    <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                                    <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                                </div>
+                            </div>
+                            <div class="panel-body msg_container_base">
+                            
+                                <div class="row msg_container base_sent">
+                                    <div class="col-md-10 col-xs-10">
+                                        <div class="messages msg_sent">
+                                            <p>Olá, eu sou a Saria e estou aqui para ajudar você a controlar a sua residência. Você pode digitar o que quer que eu faça aqui nesse chat, por exemplo: "Saria, ligue as luzes do Hall!". </p>
+                                            <time datetime="{{=request.now}}">{{=request.now}}</time>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 avatar">
+                                        <img src="{{=URL('static','images/avat2.png')}}" class=" img-responsive ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="input-group" style="width: 600px;">
+                                    <form id="chat_form">
+                                        <input id="chat_input" autofocus type="text" class="form-control input-sm chat_input" placeholder="{{=T('Digite sua mensagem aqui...')}}" />
+                                        <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" type="submit" id="chat_btn">{{=T("Enviar")}}</button>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+          </div> 
+    </div>

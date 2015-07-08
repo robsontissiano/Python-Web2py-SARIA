@@ -7,11 +7,11 @@
     import time
     import serial
      
-    # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM1', 9600)
+    # Iniciando conexao serial com o arduino
+    comport = serial.Serial('/dev/ttyACM2', 9600)
      
     #PARAM_CARACTER='t'
-    PARAM_ASCII=str(chr(116))       # Equivalente 116 = t
+    PARAM_ASCII=str(chr(15)) 
      
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
@@ -30,35 +30,400 @@
 
 < object
 
-> object acender_luz python
+> object luz_serv_on python
 
     import time
-    from pyfirmata import Arduino, util
-    import sys, os
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM3', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(10))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
 
-    b = Arduino('/dev/ttyACM0')
+    return VALUE_SERIAL
 
-    red0 = b.get_pin('d:12:o')
-    red0.write(1)
-
-    return str("Luz acesa com sucesso!")
+    # Fechando conexao serial
+    comport.close()
 
 < object
 
-> object apagar_luz python
+> object luz_serv_off python
 
     import time
-    from pyfirmata import Arduino, util
-    import sys, os
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM3', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(16))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
 
-    b = Arduino('/dev/ttyACM0')
+    return VALUE_SERIAL
 
-    red0 = b.get_pin('d:12:o')
-    red0.write(0)
-
-    return str("Luz apagada com sucesso!")
+    # Fechando conexao serial
+    comport.close()
 
 < object
+
+> object luz_serv_status python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM3', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(22))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+    
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+
+> object luz_coz_on python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(11))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object luz_coz_off python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM3', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(17))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object luz_coz_status python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM3', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(23))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+    
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+
+> object luz_hall_on python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(12))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object luz_hall_off python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(18))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object luz_hall_status python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(24))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+    
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+
+> object ar_on python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(13))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object ar_off python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(19))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object ar_status python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(25))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+    
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+
+> object tv_on python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(14))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object tv_off python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(20))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
+> object tv_status python
+
+    import time
+    import serial
+     
+    # Iniciando conexao serial
+    comport = serial.Serial('/dev/ttyACM2', 9600)
+     
+    #caracter a ser enviado para o arduino
+    PARAM_ASCII=str(chr(26))
+     
+    # Time entre a conexao serial e o tempo para escrever (enviar algo)
+    time.sleep(1.8) # Entre 1.5s a 2s
+     
+    #envia para o arduino
+    comport.write(PARAM_ASCII)
+  
+    VALUE_SERIAL=comport.readline()
+
+    return VALUE_SERIAL
+    
+    # Fechando conexao serial
+    comport.close()
+
+< object
+
 
 + acenda a luz
 - <call>acender_luz </call>
@@ -71,3 +436,57 @@
 
 + qual a temperatura da casa?
 - A temperatura ambiente é de <call>temperatura </call>
+
++ temperatura
+- A temperatura ambiente é de <call>temperatura </call> graus.
+
+//area de servico
++ acender a luz da area
+- <call>luz_serv_on </call>
+
++ apagar a luz da area
+- <call>luz_serv_off </call>
+
++ verificar a luz da area
+- <call>luz_serv_status </call>
+
+//cozinha
++ acender a luz da cozinha
+- <call>luz_coz_on </call>
+
++ apagar a luz da cozinha
+- <call>luz_coz_off </call>
+
++ verificar a luz da cozinha
+- <call>luz_coz_status </call>
+
+//hall
++ acender a luz do hall
+- <call>luz_hall_on </call>
+
++ apagar a luz do hall
+- <call>luz_hall_off </call>
+
++ verificar a luz do hall
+- <call>luz_hall_status </call>
+
+
+//ar
++ ligar ar condicionado
+- <call>ar_on </call>
+
++ desligar ar condicionado
+- <call>ar_off </call>
+
++ verificar ar condicionado
+- <call>ar_status </call>
+
+//tv
++ ligar a tv
+- <call>tv_on </call>
+
++ desligar a tv
+- <call>tv_off </call>
+
++ verificar a tv
+- <call>tv_status </call>

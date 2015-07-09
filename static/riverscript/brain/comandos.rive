@@ -441,14 +441,37 @@
 - A temperatura ambiente é de <call>temperatura </call> graus.
 
 //area de servico
-+ acender a luz da area
++ acender luz area
 - <call>luz_serv_on </call>
 
-+ apagar a luz da area
++ acenda a luz da area de serviço, por favor
+- {@acender luz area}
+
++ oi saria, acenda a luz da area
+- {@acender luz area}
+
++ pode acender a luz da area para mim
+- {@acender luz area}
+
++ * acenda a luz da area
+- {@acender luz area}
+
++ * acenda a luz da area de serviço
+- {@acender luz area}
+
++ * acender a luz da area de servico
+- {@acender luz area}
+
+
++ apagar luz area
 - <call>luz_serv_off </call>
 
-+ verificar a luz da area
++ verificar luz area
 - <call>luz_serv_status </call>
+
+
+
+
 
 //cozinha
 + acender a luz da cozinha

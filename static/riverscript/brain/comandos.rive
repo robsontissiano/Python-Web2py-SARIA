@@ -8,7 +8,7 @@
     import serial
      
     # Iniciando conexao serial com o arduino
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #PARAM_CARACTER='t'
     PARAM_ASCII=str(chr(15)) 
@@ -36,7 +36,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(10))
@@ -62,7 +62,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(16))
@@ -88,7 +88,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(22))
@@ -115,7 +115,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(11))
@@ -141,7 +141,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(17))
@@ -167,7 +167,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(23))
@@ -194,7 +194,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(12))
@@ -220,7 +220,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(18))
@@ -246,7 +246,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(24))
@@ -273,7 +273,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(13))
@@ -299,7 +299,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(19))
@@ -325,7 +325,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(25))
@@ -352,7 +352,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(14))
@@ -378,7 +378,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(20))
@@ -404,7 +404,7 @@
     import serial
      
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
+    comport = serial.Serial('/dev/ttyACM0', 9600)
      
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(26))
@@ -424,18 +424,44 @@
 
 < object
 
++ o que faz
+- Posso acender, apagar e verificar o estado das luzes da Área de serviço. Da cozinha e do hall. Também posso verificar a temperatura. Ligar e desligar o ar condicionado e a TV.
 
-+ acenda a luz
-- <call>acender_luz </call>
++ o que você pode fazer?
+- {@o que faz}
 
-+ apague a luz
-- <call>apagar_luz </call>
++ o que você faz?
+- {@o que faz}
+
++ o que você faz
+- {@o que faz}
+
++ quais os comandos simplificados?
+- "Acender luz da área", "Apagar luz da área", "Verificar luz da área", "Acender luz da cozinha", "Apagar luz da cozinha", "Verificar luz da cozinha", "Acender luz do hall", "Apagar luz do hall", "verificar luz do hall", "Verificar temperatura", "Ligar TV", "Desligar TV", "Verificar TV", "Ligar ar", "Desligar ar", "Verificar ar".
 
 + olá
 - olá, que bom ver você por aqui
 
 + qual a temperatura da casa?
-- A temperatura ambiente é de <call>temperatura </call>
+- {@temperatura}
+
++ qual a temperatura do meu quarto?
+- {@temperatura}
+
++ esta frio hoje?
+- {@temperatura}
+
++ está frio hoje?
+- {@temperatura}
+
++ está frio hoje
+- {@temperatura}
+
++ como esta a temperatura
+- {@temperatura}
+
++ como está a temperatura?
+- {@temperatura}
 
 + temperatura
 - A temperatura ambiente é de <call>temperatura </call> graus.
@@ -444,65 +470,344 @@
 + acender luz area
 - <call>luz_serv_on </call>
 
-+ acenda a luz da area de serviço, por favor
++ acender luz da área
 - {@acender luz area}
 
-+ oi saria, acenda a luz da area
++ acender luzes da area de serviço
+- <call>luz_serv_on </call>
+
++ acenda luz serviço
+- <call>luz_serv_on </call>
+
++ acenda as luzes da area de serviço, por favor
 - {@acender luz area}
 
-+ pode acender a luz da area para mim
++ oi saria, acenda as luzes da area
 - {@acender luz area}
 
-+ * acenda a luz da area
++ pode acender as luzes da area para mim
 - {@acender luz area}
 
-+ * acenda a luz da area de serviço
++ * acenda as luzes da area
 - {@acender luz area}
 
-+ * acender a luz da area de servico
++ acenda as luzes da area
 - {@acender luz area}
 
++ * acender as luzes da area
+- {@acender luz area}
+
++ acender as luzes da area
+- {@acender luz area}
+
++ acender as luzes da area de serviço
+- {@acender luz area}
+
++ * acenda as luzes da area de serviço
+- {@acender luz area}
+
++ * acender as luzes da area de serviço
+- {@acender luz area}
 
 + apagar luz area
 - <call>luz_serv_off </call>
 
++ apague as luzes da area de serviço, por favor
+- {@apagar luz area}
+
++ apagar luz da área
+- {@apagar luz area}
+
++ apague luz serviço
+- {@apagar luz area}
+
++ pode apagar as luzes da area para mim
+- {@apagar luz area}
+
++ * apague as luzes da area
+- {@apagar luz area}
+
++ * apague as luzes da area de serviço
+- {@apagar luz area}
+
++ * apagar as luzes da area de serviço
+- {@apagar luz area}
+
++ apagar as luzes da area de serviço
+- {@apagar luz area}
+
++ apagar as luzes area de serviço
+- {@apagar luz area}
+
++ apagar as luzes area serviço
+- {@apagar luz area}
+
++ apagar as luzes da area serviço
+- {@apagar luz area}
+
++ apagar as luzes da area
+- {@apagar luz area}
+
++ apagar luzes area serviço
+- {@apagar luz area}
+
 + verificar luz area
 - <call>luz_serv_status </call>
 
++ verifique a luz da area de serviço, por favor
+- {@verificar luz area}
 
++ verificar luz da área
+- {@verificar luz area}
 
++ verifique luz serviço
+- {@verificar luz area}
+
++ pode verificar a luz da area para mim
+- {@verificar luz area}
+
++ * verifique a luz da area
+- {@verificar luz area}
+
++ * verifique a luz da area de serviço
+- {@verificar luz area}
+
++ * verificar a luz da area de serviço
+- {@verificar luz area}
 
 
 //cozinha
-+ acender a luz da cozinha
++ acender luz cozinha
 - <call>luz_coz_on </call>
 
-+ apagar a luz da cozinha
++ acenda a luz da cozinha, por favor
+- {@acender luz cozinha}
+
++ acender luz da cozinha
+- {@acender luz cozinha}
+
++ oi saria, acenda a luz da cozinha
+- {@acender luz cozinha}
+
++ pode acender a luz da cozinha para mim
+- {@acender luz cozinha}
+
++ * acenda a luz da cozinha
+- {@acender luz cozinha}
+
++ acenda a luz da cozinha
+- {@acender luz cozinha}
+
++ acenda luz cozinha
+- {@acender luz cozinha}
+
++ * acender a luz da cozinha
+- {@acender luz cozinha}
+
++ acender a luz da cozinha
+- {@acender luz cozinha}
+
++ acender a luz da area da cozinha
+- {@acender luz cozinha}
+
++ * acenda a luz da cozinha
+- {@acender luz cozinha}
+
++ * acender a luz da area da cozinha
+- {@acender luz cozinha}
+
++ olá saria, poderia ligar a luz da cozinha, por favor?
+- {@acender luz cozinha}
+
++ olá saria, poderia ligar a luz da cozinha, por favor
+- {@acender luz cozinha}
+
++ olá saria, alguma novidade?
+- não
+
++ olá saria, alguma novidade
+- não
+
+
++ saria, acenda as luzes da cozinha
+- {@acender luz cozinha}
+
++ saria acenda as luzes da cozinha
+- {@acender luz cozinha}
+
++ saria, acenda as luzes da cozinha.
+- {@acender luz cozinha}
+
++ saria, acenda as luzes da cozinha!
+- {@acender luz cozinha}
+
++ saria, acenda as luzes da cozinha?
+- {@acender luz cozinha}
+
++ saria acenda as luzes da cozinha!
+- {@acender luz cozinha}
+
++ saria acenda as luzes da cozinha?
+- {@acender luz cozinha}
+
++ apagar luz cozinha
 - <call>luz_coz_off </call>
 
-+ verificar a luz da cozinha
++ apague a luz da cozinha, por favor
+- {@apagar luz cozinha}
+
++ apagar luz da cozinha
+- {@apagar luz cozinha}
+
++ oi saria, apague a luz da cozinha
+- {@apagar luz cozinha}
+
++ pode apagar a luz da cozinha para mim
+- {@apagar luz cozinha}
+
++ * apague a luz da cozinha
+- {@apagar luz cozinha}
+
++ apague luz cozinha
+- {@apagar luz cozinha}
+
++ * apagar a luz da cozinha
+- {@apagar luz cozinha}
+
++ apagar a luz da cozinha
+- {@apagar luz cozinha}
+
++ apagar a luz cozinha
+- {@apagar luz cozinha}
+
++ apagar a luz da cozinha
+- {@apagar luz cozinha}
+
++ apagar a luz da cozinha *
+- {@apagar luz cozinha}
+
++ * apagar a luz da cozinha *
+- {@apagar luz cozinha}
+
++ apague a luz da cozinha
+- {@apagar luz cozinha}
+
++ saria, apague as luzes da cozinha
+- {@apagar luz cozinha}
+
++ saria, apague as luzes da cozinha!
+- {@apagar luz cozinha}
+
++ saria, apague as luzes da cozinha.
+- {@apagar luz cozinha}
+
++ saria, apague as luzes da cozinha?
+- {@apagar luz cozinha}
+
++ saria apague as luzes da cozinha
+- {@apagar luz cozinha}
+
++ saria apague as luzes da cozinha.
+- {@apagar luz cozinha}
+
++ saria, apague as luzes da cozinha!
+- {@apagar luz cozinha}
+
++ verificar luz cozinha
 - <call>luz_coz_status </call>
 
++ verifique a luz da cozinha, por favor
+- {@verificar luz cozinha}
+
++ verificar luz da cozinha
+- {@verificar luz cozinha}
+
++ oi saria, verifique a luz da cozinha
+- {@verificar luz cozinha}
+
++ pode verificar a luz da cozinha para mim
+- {@verificar luz cozinha}
+
++ verifique luz cozinha
+- {@verificar luz cozinha}
+
++ verifique a luz da cozinha
+- {@verificar luz cozinha}
+
++ * verificar a luz da cozinha
+- {@verificar luz cozinha}
+
++ saria, verifique as luzes da cozinha.
+- {@verificar luz cozinha}
+
++ saria, verifique as luzes da cozinha!
+- {@verificar luz cozinha}
+
++ saria, verifique as luzes da cozinha?
+- {@verificar luz cozinha}
+
+
 //hall
-+ acender a luz do hall
++ acender luz hall
 - <call>luz_hall_on </call>
 
-+ apagar a luz do hall
++ apagar luz hall
 - <call>luz_hall_off </call>
 
-+ verificar a luz do hall
++ verificar luz hall
 - <call>luz_hall_status </call>
 
++ acender luz do hall
+- {@acender luz hall}
+
++ acenda a luz do hall
+- {@acender luz hall}
+
++ ligue a luz do hall por favor.
+- {@acender luz hall}
+
++ ligue a luz do hall por favor
+- {@acender luz hall}
+
++ apague a luz do hall
+- {@apagar luz hall}
+
++ verifique a luz do hall
+- {@verificar luz hall}
+
++ verifique se eu apaguei a luz do hall.
+- {@verificar luz hall}
+
++ verifique se eu apaguei a luz do hall
+- {@verificar luz hall}
+
++ verificar temperatura
+- {@temperatura}
+
++ qual a temperatura do meu quarto, saria?
+- {@temperatura}
+
++ qual a temperatura do meu quarto, saria
+- {@temperatura}
 
 //ar
-+ ligar ar condicionado
++ ligar o ar
 - <call>ar_on </call>
 
-+ desligar ar condicionado
++ desligar o ar
 - <call>ar_off </call>
 
-+ verificar ar condicionado
++ verificar o ar
 - <call>ar_status </call>
+
++ ligue o ar
+- {@ligar o ar}
+
++ desligue o ar
+- {@desligar o ar}
+
++ verifique o ar
+- {@verificar o ar}
 
 //tv
 + ligar a tv
@@ -513,3 +818,132 @@
 
 + verificar a tv
 - <call>tv_status </call>
+
++ ligue a tv
+- {@ligar a tv}
+
++ desligue a tv
+- {@desligar a tv}
+
++ verifique a tv
+- {@verificar a tv}
+
++ verifique a temperatura
+- {@temperatura}
+
+//area de servico
++ acender luz area
+- <call>luz_serv_on </call>
+
++ acenda a luz da área
+- {@acender luz area}
+
++ acender luzes da area de serviço
+- <call>luz_serv_on </call>
+
++ acenda as luzes da area de serviço, por favor
+- {@acender luz area}
+
++ oi saria, acenda as luzes da area
+- {@acender luz area}
+
++ pode acender as luzes da area para mim
+- {@acender luz area}
+
++ * acenda as luzes da area
+- {@acender luz area}
+
++ acenda as luzes da area
+- {@acender luz area}
+
++ * acender as luzes da area
+- {@acender luz area}
+
++ acender as luzes da area
+- {@acender luz area}
+
++ acender as luzes da area de serviço
+- {@acender luz area}
+
++ * acenda as luzes da area de serviço
+- {@acender luz area}
+
++ * acender as luzes da area de serviço
+- {@acender luz area}
+
++ apagar luz area
+- <call>luz_serv_off </call>
+
++ apague as luzes da area de serviço, por favor
+- {@apagar luz area}
+
++ apague a luz da área
+- {@apagar luz area}
+
++ oi saria, apague as luzes da area
+- {@apagar luz area}
+
++ pode apagar as luzes da area para mim
+- {@apagar luz area}
+
++ * apague as luzes da area
+- {@apagar luz area}
+
++ * apague as luzes da area de serviço
+- {@apagar luz area}
+
++ * apagar as luzes da area de serviço
+- {@apagar luz area}
+
++ apagar as luzes da area de serviço
+- {@apagar luz area}
+
++ apagar as luzes area de serviço
+- {@apagar luz area}
+
++ apagar as luzes area serviço
+- {@apagar luz area}
+
++ apagar as luzes da area serviço
+- {@apagar luz area}
+
++ apagar as luzes da area
+- {@apagar luz area}
+
++ * apagar * área
+- {@apagar luz area}
+
+
++ apagar luzes area serviço
+- {@apagar luz area}
+
++ verificar luz area
+- <call>luz_serv_status </call>
+
++ verifique a luz da area de serviço, por favor
+- {@verificar luz area}
+
++ verificar luz da área
+- {@verificar luz area}
+
++ oi saria, verifique a luz da area
+- {@verificar luz area}
+
++ pode verificar a luz da area para mim
+- {@verificar luz area}
+
++ verifique a luz da área
+- {@verificar luz area}
+
++ * verifique a luz da area de serviço
+- {@verificar luz area}
+
++ * verificar a luz da area de serviço
+- {@verificar luz area}
+
++ temperatura ambiente
+- {@temperatura}
+
++ vaca
+- muuuuuuuuuuuuuu
+

@@ -52,7 +52,7 @@ $(function () {
 	              variant: 'f2'
 	            });
 
-			  }, 300);
+			  }, 100);
 		});
 
 		request.fail(function (jqXHR, textStatus) {

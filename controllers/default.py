@@ -17,8 +17,8 @@ def bot_talk():
     import sys, os
 
     bot = RiveScript(utf8=True)
-    #bot.load_directory("/home/mate/Downloads/web2py/applications/saria/static/riverscript/brain/")
-    bot.load_directory("/home/relsi/Projetos/Web2py/pris/applications/saria/static/riverscript/brain")
+    bot.load_directory("/home/mate/Downloads/web2py/applications/saria/static/riverscript/brain/")
+    #bot.load_directory("/home/relsi/Projetos/Web2py/pris/applications/saria/static/riverscript/brain")
     bot.sort_replies()
 
     msg = request.post_vars.chat_text

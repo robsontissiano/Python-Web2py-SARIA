@@ -6,23 +6,23 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial com o arduino
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #PARAM_CARACTER='t'
-    PARAM_ASCII=str(chr(15)) 
-     
+    PARAM_ASCII=str(chr(15))
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #comport.write(PARAM_CARACTER)
     comport.write(PARAM_ASCII)
-     
+
     VALUE_SERIAL=comport.readline()
-     
+
     #resposta =  'A temperatura local é: %s' % (VALUE_SERIAL)
-    
+
     return VALUE_SERIAL
 
     # Fechando conexao serial
@@ -34,19 +34,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(10))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -60,19 +60,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
-    PARAM_ASCII=str(chr(16))
-     
+    PARAM_ASCII=str(chr(11))
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -86,23 +86,23 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(22))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
-    
+
     # Fechando conexao serial
     comport.close()
 
@@ -113,19 +113,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(11))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -139,19 +139,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(17))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -165,23 +165,23 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM3', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(23))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
-    
+
     # Fechando conexao serial
     comport.close()
 
@@ -192,19 +192,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(12))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -218,19 +218,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(18))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -244,23 +244,23 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(24))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
-    
+
     # Fechando conexao serial
     comport.close()
 
@@ -271,19 +271,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(13))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -297,19 +297,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(19))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -323,23 +323,23 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(25))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
-    
+
     # Fechando conexao serial
     comport.close()
 
@@ -350,19 +350,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(14))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -376,19 +376,19 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(20))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
@@ -402,34 +402,28 @@
 
     import time
     import serial
-     
+
     # Iniciando conexao serial
-    comport = serial.Serial('/dev/ttyACM2', 9600)
-     
+    comport = serial.Serial('/dev/ttyACM0', 9600)
+
     #caracter a ser enviado para o arduino
     PARAM_ASCII=str(chr(26))
-     
+
     # Time entre a conexao serial e o tempo para escrever (enviar algo)
     time.sleep(1.8) # Entre 1.5s a 2s
-     
+
     #envia para o arduino
     comport.write(PARAM_ASCII)
-  
+
     VALUE_SERIAL=comport.readline()
 
     return VALUE_SERIAL
-    
+
     # Fechando conexao serial
     comport.close()
 
 < object
 
-
-+ acenda a luz
-- <call>acender_luz </call>
-
-+ apague a luz
-- <call>apagar_luz </call>
 
 + olá
 - olá, que bom ver você por aqui
@@ -440,9 +434,30 @@
 + temperatura
 - A temperatura ambiente é de <call>temperatura </call> graus.
 
-//area de servico
-+ acender luz area
+//Lampada
++ acender luz
 - <call>luz_serv_on </call>
+
++ acenda a luz, por favor
+- <call>luz_serv_on </call>
+
++ apagar a luz
+- <call>luz_serv_off </call>
+
++ apagar luz
+- <call>luz_serv_off </call>
+
++ apague a luz, por favor
+- <call>luz_serv_off </call>
+
++ verificar a luz
+- <call>luz_serv_status </call>
+
++ a luz esta acesa
+- <call>luz_serv_status </call>
+
++ a luz esta acesa ou apagada
+- <call>luz_serv_status </call>
 
 + acenda a luz da area de serviço, por favor
 - {@acender luz area}
@@ -461,16 +476,6 @@
 
 + * acender a luz da area de servico
 - {@acender luz area}
-
-
-+ apagar luz area
-- <call>luz_serv_off </call>
-
-+ verificar luz area
-- <call>luz_serv_status </call>
-
-
-
 
 
 //cozinha

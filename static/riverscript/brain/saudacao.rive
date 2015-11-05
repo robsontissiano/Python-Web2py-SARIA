@@ -1,8 +1,16 @@
 ! version = 2.0
 
-
 + oi saria
 - Oi humano, tudo bem?
+- Olá, como tem passado?
+- Olá, como vão as coisas.
+- Oi
 
 + hello
+- {@oi saria}
+
++ opa
+- {@oi saria}
+
++ e ai
 - {@oi saria}
